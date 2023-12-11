@@ -22,5 +22,5 @@ def func2(a):
     x = 5
     return a+x
 
-#호ㅜㄹ
+#호출
 print(func2(1))
