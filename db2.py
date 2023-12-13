@@ -1,8 +1,9 @@
-# db1.py
-import sqlite3
+# db2.py
+#커밋이 없으면 데이터 사라진다!
 
-#연결객체 생성(:memory:) 메모리에 임시 작업
-con = sqlite3.connect(":memory:")
+import sqlite3
+#연결객체(파일 저장)
+con = sqlite3.connect("c:\\work\\sample.db")
 #커서객체
 cur = con.cursor()
 
@@ -29,6 +30,10 @@ cur.execute("select * from PhoneBook;")
 # print(cur.fetchmany(2))
 print("---fetchall()--")
 print(cur.fetchall())
+
+#연결객체
+con.commit()
+
 
 
 
